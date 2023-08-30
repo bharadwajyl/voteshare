@@ -1,4 +1,4 @@
-# DEMO
+# As of now its for Desktop screen.
 1) Register using your email address.
 2) LogIn using the credentials email: admin, password: root
 3) Navigate to Admin panel in the top nav bar.
