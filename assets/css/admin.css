@@ -1,0 +1,180 @@
+/***************************
+    REGISTRATION/LOGIN
+****************************/
+.welcome{
+    width:100vw;
+    height:100vh;
+    overflow:hidden !important;
+    background-color:var(--primary);
+    color:var(--white);
+}
+
+.welcome section{
+    height:100%;
+    align-items:center;
+}   
+
+.welcome article{
+    width:50%;
+    position:relative;
+}
+
+.welcome article p{
+    color:var(--lite);
+}
+
+.welcome article a{
+    color:var(--white);
+}
+
+.logo{
+    padding:2rem 0;
+}
+
+/*form setup*/
+.welcome form{
+    background-color:var(--white);
+    height:100%;
+}
+
+form fieldset{
+    position:relative;
+    color:var(--gray);
+    margin-bottom:1rem;
+}
+
+form fieldset label{
+    padding:0.2rem;
+    font-size:12px;
+    position:absolute;
+    background-color:var(--white);
+    top:-5px;
+    left:30px;
+    display:block;
+    width:fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+}
+
+form input, form select{
+    width:100%;
+    padding:1rem;
+    border-radius:5px;
+    border:1px solid var(--gray);
+    background-color:var(--white);
+}
+
+form .navigation_details fieldset:last-child label{
+    position:static;
+    margin:auto;
+}
+
+.fields{
+    width:60%;
+    margin:auto;
+}
+
+.fields li{
+    display:none;
+}
+
+.fields li:last-child fieldset{
+    align-items:center;
+    justify-content:space-between;
+}
+
+.navigation_details aside{
+    align-items:center;
+    justify-content:center;
+    margin:auto;
+}
+
+.navigation_details aside img{
+    flex:1 1 30%;
+    margin:1%;
+    max-width:150px;
+    width:100%;
+    height:100px;
+    transition:0.5s;
+    border-radius:10px;
+}
+
+.navigation_details aside img:hover{
+    box-shadow:0px 6px 16px -6px var(--gray);
+}
+
+form input[type=checkbox]{
+    width:15px;
+    height:15px;
+}
+
+/*multistep buttons*/
+.multi_step{
+    align-items:center;
+    justify-content:center;
+    color:var(--white);
+    pointer-events:none;
+}
+
+.multi_step li{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:50px;
+    height:50px;
+    font-size:2em;
+    border-radius:50%;
+    background-color:var(--primary);
+    opacity:0.4;
+    position:relative;
+}
+
+.multi_step li:not(:last-child){
+    margin-right:50px;
+}
+
+.multi_step li:not(:last-child):after{
+    content:"";
+    position:absolute;
+    top:50%;
+    left:100%;
+    width:50px;
+    height:5px;
+    background-color:var(--primary);
+}
+
+.welcome article{
+    -webkit-animation: scroll_from_left 1s ease-out forwards;
+    animation: scroll_from_left 1s ease-out forwards;
+    animation-delay:0.5s;
+    opacity:0;
+}
+
+.welcome form{
+    -webkit-animation: scroll_from_right 1s ease-out forwards;
+    animation: scroll_from_right 1s ease-out forwards;
+}
+
+@media (max-width:920px){
+    .welcome{
+        overflow-y:auto;
+        height:100%;
+    }
+    
+    .fields, .welcome article{
+        width:100%;
+    }
+    
+    .welcome article{
+        text-align:center;
+    }
+    
+    .welcome article{
+        animation:none;
+        opacity:1;
+    }
+
+    .welcome form{
+        animation:none;
+    }
+}
